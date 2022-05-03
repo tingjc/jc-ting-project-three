@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import DisplayDrink from './components/DisplayDrink';
 import MenuForm from './components/MenuForm';
+import DisplayImage from './components/DisplayImage';
 
 
 function App() {
@@ -48,17 +49,25 @@ function App() {
   
 
   return (
-    <div className="App">
-      <h1>Hello</h1>
-      <div className='image'>
-        <img src='./assets/ready.png'/>
+    <>
+    <header>
+      <div className='wrapper'>
+        <h1>What's In My (Caffeinated) Drink?</h1>
       </div>
+    </header>
+    <div className="App wrapper">
+
+      <div className='image'>
+        <DisplayImage drinks = {drinkSelection} />
+      </div>
+
       <div className='text'>
         <MenuForm drinks = {coffeeMenu} getDrink = {getDrink}/>
         <DisplayDrink drinks = {drinkSelection} />
       </div>
       
     </div>
+    </>
   );
 }
 
