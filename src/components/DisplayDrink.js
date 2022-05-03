@@ -1,16 +1,19 @@
 function DisplayDrink( {drinks} ) {
     return(
-    <section>
+    <div>
         {drinks.length === 0 ? (
             <h2>Brewing ...</h2>
         ): (
             <div className="coffeeText">
                 <h2>{drinks[0].title}</h2>
+                <h3> Ingredients: {
+                    drinks[0].ingredients.join(', ')}</h3>
+                
                 <p>{drinks[0].description}</p>
             </div>
             
         )}
-    </section>
+    </div>
     );
 }
 

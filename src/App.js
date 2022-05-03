@@ -21,8 +21,13 @@ function App() {
   //create local copy of coffeeCall, taking out unfamiliar drinks
   const coffeeData = [...coffeeCall];
   const coffeeMenu = coffeeData.filter ( (drink) => {
-    return drink.id !== 9 && drink.id !== 10 && drink.id <= 16;
+    return drink.id <= 6;
   });
+
+  //add images to coffeeMenu
+  coffeeMenu.forEach((drink) => {
+    drink.img = `./assets/${drink.id}.png`
+  })
 
   console.log(coffeeMenu);
 
@@ -45,7 +50,9 @@ function App() {
   return (
     <div className="App">
       <h1>Hello</h1>
-
+      <div className='image'>
+        <img src='./assets/ready.png'/>
+      </div>
       <div className='text'>
         <MenuForm drinks = {coffeeMenu} getDrink = {getDrink}/>
         <DisplayDrink drinks = {drinkSelection} />
