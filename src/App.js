@@ -7,7 +7,6 @@ import DisplayImage from './components/DisplayImage';
 import Header from './components/Header';
 import Footer from './components/Footer';
 
-
 function App() {
   //create state to store API call data
   const [coffeeCall, setCoffeeCall] = useState([]);
@@ -32,24 +31,18 @@ function App() {
     drink.img = `./assets/${drink.id}.png`
   })
 
-  console.log(coffeeMenu);
-
   //create state to store data that will be selected from MenuForm, and then will be displayed in DisplayDrink
   const [drinkSelection, setDrinkSelection] = useState([]);
 
   //function to change drinkSelection contents, to be called in MenuForm
   const getDrink = (selection) => {
     //filter coffeeMenu for the drink selection
-    const menuCopy = [...coffeeMenu];
-    
+    const menuCopy = [...coffeeMenu];  
     const filterDrink = menuCopy.filter( ( drink ) => {
       return drink.title === selection
     });
-
     setDrinkSelection(filterDrink);
   }
-  
-
   return (
     <>
     <Header />
@@ -72,5 +65,4 @@ function App() {
     </>
   );
 }
-
 export default App;

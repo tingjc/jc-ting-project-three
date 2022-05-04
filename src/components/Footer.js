@@ -15,9 +15,8 @@ function Footer() {
                 </ul>
 
             <p>© 2022 by <a href="https://jcting-web.dev" title="link to web developer's portfolio" >JC Ting</a></p>
-            <p>Created at <a class= 
+            <p>Created at <a className= 
             "juno" href="https://junocollege.com" title="link to Juno College">Juno College </a></p>
-
             </div>
         </footer>
     )

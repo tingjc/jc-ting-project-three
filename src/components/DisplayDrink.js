@@ -13,8 +13,7 @@ function DisplayDrink( {drinks} ) {
                     drinks[0].ingredients.join(', ')}</h3>
                 
                 <p>{drinks[0].description}</p>
-            </div>
-            
+            </div>          
         )}
     </div>
     );

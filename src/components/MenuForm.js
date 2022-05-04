@@ -14,27 +14,27 @@ function MenuForm( {drinks, getDrink} ) {
     return (
         <div className="drinkMenu">
             <h4>Select a drink:</h4>
-        <select 
-        value= {userChoice} 
-        onChange={handleUserChoice}
-        id="menu" 
-        name="menu">
-            <option value="placeholder" disabled> Pick a Drink! </option>
-            {/* populate the dropdown with the coffeeMenu items */}
-            { drinks.map((drink) => {
-                return (
-                    <option 
-                        value = {drink.title} 
-                        key = {drink.id}>
-                        
-                        {drink.title}
-
-                    </option>
-                )
-            })
-            } {/*end map*/}
-            
-        </select>
+            <form>
+                <select 
+                value= {userChoice} 
+                onChange={handleUserChoice}
+                id="menu" 
+                name="menu">
+                    <option value="placeholder" disabled> Pick a Drink! </option>
+                    {/* populate the dropdown with the coffeeMenu items */}
+                    { drinks.map((drink) => {
+                        return (
+                            <option 
+                                value = {drink.title} 
+                                key = {drink.id}>
+                                
+                                {drink.title}
+                            </option>
+                        )
+                    })
+                    } {/*end map*/}
+                </select>
+            </form>
         </div>
 
     )
