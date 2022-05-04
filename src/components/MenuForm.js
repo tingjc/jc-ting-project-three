@@ -13,6 +13,7 @@ function MenuForm( {drinks, getDrink} ) {
     // take info from the drinks prop (coffeeMenu)
     return (
         <div className="drinkMenu">
+            <h4>Select a drink:</h4>
         <select 
         value= {userChoice} 
         onChange={handleUserChoice}

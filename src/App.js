@@ -4,6 +4,8 @@ import axios from 'axios';
 import DisplayDrink from './components/DisplayDrink';
 import MenuForm from './components/MenuForm';
 import DisplayImage from './components/DisplayImage';
+import Header from './components/Header';
+import Footer from './components/Footer';
 
 
 function App() {
@@ -50,23 +52,23 @@ function App() {
 
   return (
     <>
-    <header>
-      <div className='wrapper'>
-        <h1>What's In My (Caffeinated) Drink?</h1>
-      </div>
-    </header>
-    <div className="App wrapper">
+    <Header />
 
-      <div className='image'>
-        <DisplayImage drinks = {drinkSelection} />
-      </div>
+    <main>
+      <div className="App wrapper">
 
-      <div className='text'>
-        <MenuForm drinks = {coffeeMenu} getDrink = {getDrink}/>
-        <DisplayDrink drinks = {drinkSelection} />
+        <div className='image'>
+          <DisplayImage drinks = {drinkSelection} />
+        </div>
+
+        <div className='text'>
+          <MenuForm drinks = {coffeeMenu} getDrink = {getDrink}/>
+          <DisplayDrink drinks = {drinkSelection} />
+        </div>
+        
       </div>
-      
-    </div>
+    </main>
+    <Footer />
     </>
   );
 }
